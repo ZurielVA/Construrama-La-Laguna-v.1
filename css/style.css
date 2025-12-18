@@ -1,0 +1,103 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; 
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+:root {
+    --bg-navbar: #FFA525;
+    --white: #FFFFFF;
+    --black: #000000;
+    --yellow: #ffff00;
+    --gray: #b4bcc4;
+    --blue-button: #003B78;
+}
+
+a{
+    text-decoration: none!important;
+    font-family: var(--font_text);
+}
+
+
+
+@media (min-width: 1400px) {
+    .container-xl{
+        max-width: 1150px!important;
+    }
+}
+
+/* navbar */
+
+.bg-navbar {
+    background-color: var(--bg-navbar);
+}
+
+.container-navbar {
+    padding: 0.5rem 0 0.5rem 0;
+}
+
+.logo-cll {
+    width: 16rem;
+    max-width: 100%;
+}
+
+.navbar-nav-lg-d .nav-link {
+    position: relative;
+    color: var(--white);
+    font-size: 1.8rem;
+    margin-right: 2.4rem;
+}
+
+/* underline */
+.navbar-nav-lg-d .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--white);
+    display: block;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+}
+
+.navbar-nav-lg-d .nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+/* excluir botón */
+.navbar-nav-lg-d .button-contact::after {
+    display: none;
+}
+
+.navbar-nav-lg-d .nav-link:hover,
+.navbar-nav-lg-d .nav-link:focus {
+    color: var(--white);
+}
+
+
+.icon-phone {
+    margin-right: 1rem;
+}
+
+.navbar .nav-item .button-contact {
+    background-color: var(--blue-button);
+    color: var(--white);
+    padding: 1rem 2rem!important;
+    border-radius: 0.8rem;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.15);
+
+    transition:
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.navbar .nav-item .button-contact:hover {
+    background-color: #09468f;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.35);
+}

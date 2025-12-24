@@ -1,3 +1,5 @@
+/* setting system */
+
 html {
     box-sizing: border-box;
     font-size: 62.5%; 
@@ -39,6 +41,29 @@ a{
     outline: none !important;
     box-shadow: none !important;
 }
+
+/* button contact */
+
+.button-contact {
+    background-color: var(--blue-button);
+    color: var(--white);
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    border-radius: 0.8rem;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.15);
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.button-contact:hover {
+    background-color: #09468f;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.35);
+}
+
+/* end setting system */
 
 /* navbar */
 
@@ -117,7 +142,7 @@ a{
 }
 
 .burger-toggler-icon i{
-    font-size: 5rem;
+    font-size: 4rem;
     color: var(--white);
     transition: all 0.3s ease;
     transform: scaleY(0.7); 
@@ -142,10 +167,20 @@ a{
 }
 
 .navbar-nav-md > .nav-item > .nav-link{
-    color: var(--black)!important;
+    color: var(--white)!important;
     font-size: 1.8rem;
     /* falta la fuente */
-    padding: 3.6rem 1rem 1.6rem 1rem;
+    padding: 0rem 1rem 1rem 1rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.offcanvas-body .nav-link{
+    border-bottom: 0.2rem solid var(--white);
+}
+
+.margin-icons-nav {
+    margin-right: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -153,3 +188,37 @@ a{
         padding: 0 2rem 0 2rem;
     }
 }
+
+.button-container{
+    margin-top: 3rem;
+    padding: 0 1.4rem;
+}
+
+.nav-link-arrow {
+    padding: 0;
+}
+
+.nav-link-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-arrow {
+    font-size: 1.4rem;
+    opacity: 0.7;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Hover */
+.nav-link-arrow:hover .nav-arrow {
+    transform: translateX(4px);
+    opacity: 1;
+}
+

@@ -18,6 +18,10 @@ html {
     --blue-button: #003B78;
 }
 
+h1{
+    font-size: 4.6rem!important;
+}
+
 a{
     text-decoration: none!important;
     font-family: var(--font_text);
@@ -25,13 +29,13 @@ a{
 
 
 @media (min-width: 1400px) {
-    .container-navbar{
+    .container-xl{
         max-width: 1150px!important;
     }
 }
 
 @media (max-width: 1200px) {
-    .container-navbar{
+    .container-xl{
         max-width: 1000px!important;
     }
 }
@@ -66,6 +70,12 @@ a{
 /* end setting system */
 
 /* navbar */
+
+.navbar-position{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
 
 .bg-navbar {
     background-color: var(--bg-navbar);
@@ -221,4 +231,54 @@ a{
     transform: translateX(4px);
     opacity: 1;
 }
+
+
+/* Hero */
+
+.main-section{
+    width: 100%;
+    min-height: 95vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding-top: 8rem;
+}
+
+.main-overlay::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+
+.container-main-title{
+    max-width: 1150px!important;
+    margin: 0 auto;
+    padding: 0 3rem!important; 
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.subtitle-main{
+    font-size: 2rem;
+    width: 75%;
+}
+
+@media (max-width: 576px) {
+    .container-main {
+        text-align: center;
+    }
+}
+
+
+/* section about us */
+
 

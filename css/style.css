@@ -15,6 +15,7 @@ html {
     --black: #000000;
     --yellow: #ffff00;
     --gray: #b4bcc4;
+    --gray-soft: #f0f6fdab;
     --orange: #FF7A2C;
     --blue-button: #003B78;
 }
@@ -440,7 +441,6 @@ a{
   padding: 2rem 3rem;
 }
 
-/* Imagen */
 .product-image {
   width: 100%;
   margin-bottom: 2.6rem;
@@ -491,4 +491,18 @@ a{
     .product-price{
         font-size: 1.4rem!important;
     }
+}
+
+/* section-location */
+
+.container-location{
+    background-color: var(--gray-soft);
+    padding: 5rem 2rem 5rem 2rem;
+}
+
+.container-iframe iframe{
+    width: 100%;
+    height: 380px;
+    border: none;
+    border-radius: 1rem;
 }

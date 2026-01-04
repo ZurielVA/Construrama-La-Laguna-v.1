@@ -15,6 +15,7 @@ html {
     --black: #000000;
     --yellow: #ffff00;
     --gray: #b4bcc4;
+    --orange: #FF7A2C;
     --blue-button: #003B78;
 }
 
@@ -33,6 +34,24 @@ p{
 a{
     text-decoration: none!important;
     font-family: var(--font_text);
+}
+
+.line-title{
+  position: relative;
+  display: inline-block;
+  padding-bottom: 1.6rem;
+}
+
+.line-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: var(--orange);
+  border-radius: 2px;
 }
 
 
@@ -135,6 +154,18 @@ a{
     margin-right: 1rem;
 }
 
+@media (max-width: 576px) {
+    .logo-cll{
+        width: 12rem;
+    }
+}
+
+@media (max-width: 220px) {
+    .logo-cll{
+        width: 5rem;
+    }
+}
+
 /* Hamburger bar */
 
 .bg-navbar{
@@ -233,7 +264,6 @@ a{
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-/* Hover */
 .nav-link-arrow:hover .nav-arrow {
     transform: translateX(4px);
     opacity: 1;
@@ -324,5 +354,70 @@ a{
     .title-us{
         padding: 2rem 0 0 0;
     }
-    
+}
+
+
+/* Title logos */
+
+.container-title{
+  margin-bottom: 2rem;
+  padding: 0 2rem 0 2rem;
+}
+
+/* carrusel logos */
+
+.logos-slide{
+    animation: 30s slide infinite linear;
+    display: inline-block;
+}
+
+.logos{
+    overflow: hidden;
+    padding: 3rem 0 3rem 0;
+    margin: 0 0 5rem 0;
+    white-space: nowrap;
+    position: relative;
+}
+
+.logos-slide img{
+    height: 8rem;
+    margin: 0 4.5rem;
+}
+
+.logos:hover .logos-slide{
+    animation-play-state: paused;
+}
+
+.logos:before,.logos:after{
+    position: absolute;
+    top: 0;
+    width: 30rem;
+    height: 100%;
+    content: "";
+    z-index: 2;
+} 
+
+.logos:before{
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), #ffffff);
+}
+
+.logos:after{
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff);
+}
+
+@keyframes slide {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+@media (max-width: 650px) {
+    .logos:before,.logos:after{
+        width: 5rem;
+    }
 }

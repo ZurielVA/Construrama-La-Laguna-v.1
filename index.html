@@ -19,7 +19,7 @@
     <header class="navbar-position" aria-label="Barra de navegación principal">
         <nav class="navbar navbar-expand-md shadow-sm bg-navbar" aria-label="Menú de navegación principal">
             <div class="container-xl container-navbar">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="#start">
                     <img class="logo-cll" src="./img/Logo_Sin_Fondo.png" alt="Logo_Construrama_La_Laguna">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
@@ -32,17 +32,15 @@
 
                         <li class="nav-item"><a class="nav-link" href="#about_us">Nosotros</a></li>
 
-                        <li class="nav-item"><a class="nav-link" href="#about_us">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#products">Productos</a></li>
 
-                        <li class="nav-item"><a class="nav-link button-global" href="#"><i
+                        <li class="nav-item"><a class="nav-link button-global" href="#contact"><i
                                     class="fa-solid fa-phone icon-phone"></i>Contacto</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-
-        <!-- 🔵 AQUÍ VA LA BARRA AZUL SECUNDARIA (solo visible en desktop y tablet) Se oculta en mobile y es reemplazada por el menú hamburguesa -->
 
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel"
             aria-label="Menú lateral">
@@ -102,6 +100,8 @@
         </div>
     </header>
 
+    <div class="preloader"></div>
+
     <main id="start">
         <div class="d-flex align-items-center main-section main-overlay"
             style="background-image: url(./img/img_fondo_main.jpg);">
@@ -110,8 +110,8 @@
                 <div class="row">
                     <div class="col-12">
 
-                        <h1 class="text-white text-center text-md-start">
-                            Construrama "La Laguna"
+                        <h1 class="text-white text-center text-md-start title-main">
+                            Construrama La Laguna
                         </h1>
 
                         <div class="subtitle-main mt-3 text-white mx-auto mx-md-0 text-center text-md-start">
@@ -147,7 +147,7 @@
                         soluciones para sus proyectos.
                     </p>
                     <div class="container-btn-us">
-                        <a href="#" class="button-global btn-us">Ver productos</a>
+                        <a href="#products" class="button-global btn-us">Ver productos</a>
                     </div>
                 </div>
             </div>
@@ -155,10 +155,6 @@
     </section>
 
     <section class="container-customers">
-
-        <div class="text-center container-title">
-            <h2 class="line-title">Distribuidores oficiales de</h2>
-        </div>
 
         <div class="logos">
             <div class="logos-slide">
@@ -188,7 +184,7 @@
     </section>
 
 
-    <section class="container-prducts">
+    <section class="container-products" id="products">
         <div class="container-xl">
 
             <div class="text-center container-title">
@@ -304,15 +300,119 @@
                     loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                     title="Ubicación de Construrama La Laguna"></iframe>
             </div>
+    </section>
 
+    <section class="section-contact" id="contact">
+
+        <div class="container-xl mt-5 container-contact">
+            <h2 class="text-center title-contact">Contáctanos</h2>
+            <div class="row">
+
+                <div class="col-md-5 text-center container-items-contact">
+                    <div class="mb-5">
+                        <img src="./img/logos/Logo_contacto.png" alt="Contáctanos" class="img-fluid size__img__contact"
+                            style="max-width: 180px;">
+                    </div>
+                    <ul class="list-unstyled text-center">
+                        <li class="list__whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/+527713651974?text=Hola, me contacto desde el sitio web de Construrama La Laguna. Me gustaría recibir más información sobre sus productos. ¡Gracias!"
+                                target="_blank" class="text-dark text-decoration-none fw-bold">
+                                771 365 1974
+                            </a>
+                        </li>
+                        <li class="list__mail">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:materialeslalaguna1979@gmail.com"
+                                class="text-dark text-decoration-none fw-bold">
+                                materialeslalaguna1979@gmail.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-7">
+                    <form action="https://formspree.io/f/xbdlnler" method="POST" class="needs-validation contact__form"
+                        id="form">
+                        <div class="row">
+                            <div class="col-md-6 mb-3 name__label form__group">
+                                <label for="name" data-section="form" class="form-label">Nombre <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" name="name" id="name" autocomplete="on"
+                                    required>
+                            </div>
+                            <div class="col-md-6 mb-3 last__name__label form__group">
+                                <label for="last_name" data-section="form" class="form-label">Apellido <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" name="last_name" id="last_name"
+                                    autocomplete="on" required>
+                            </div>
+                        </div>
+                        <div class="mb-3 email__label form__group">
+                            <label for="email" data-section="form" class="form-label">Correo Electrónico <span
+                                    class="text-danger">*</span></label>
+                            <input type="email" class="form-control" name="email" id="email"
+                                pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"
+                                required>
+                        </div>
+                        <div class="mb-3 msg__label form__group">
+                            <label for="message" data-section="form" class="form-label padd__msg">¿Cómo podemos
+                                ayudarte?</label>
+                            <textarea class="form-control" name="message" id="message" rows="4"
+                                placeholder="Déjanos tu mensaje:"></textarea>
+                        </div>
+                        <div class="container__button__contact">
+                            <button type="submit" class="button-global button__md--send">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
 
     </section>
 
+    <footer class="text-white mt-5 w-100">
+        <div class=" bg__footer container__footer">
+            <div class="container">
+                <div class="row align-items-center text-center text-md-start">
+                    <div class="col-md-4 d-flex justify-content-center justify-content-md-start">
+                        <span class="container-lock-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </span>
+                        <p class="text-center add-txt">16 de Septiembre 103, Centro, 43300 Atotonilco el Grande, Hgo.
+                        </p>
+                    </div>
+                    <div class="col-md-4 d-flex flex-column align-items-center container__address">
+                        <a class="link-priv" href="">
+                            <span class="container-lock-icon">
+                                <i class="fa-solid fa-lock"></i>
+                            </span>
+                            <p class="text-center priv--txt">Aviso de privacidad</p>
+                        </a>
+                    </div>
+                    <div class="col-md-4 d-flex flex-column align-items-center container__follow__priv">
+                        <p>Síguenos</p>
+                        <div class="d-flex gap-3 container__follow">
+                            <a href="https://www.facebook.com/share/1CPSikfAtG/?mibextid=wwXIfr" class="social-icon" target="_blank"><i
+                                    class="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/materiales_la_laguna?igsh=MTYwa2FmbmIzN29yeQ%3D%3D&utm_source=qr"
+                                class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center container__sub__footer bg__footer__copy">
+            <p class="mb-0 copy--txt">&copy; 2025 CCG Concretos - Todos los Derechos Reservados.</p>
+        </div>
+    </footer>
 
 
 
-
-
+    <script src="./js/preloader.js"></script>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/submit.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>

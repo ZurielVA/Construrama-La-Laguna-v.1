@@ -13,6 +13,6 @@ const $form = document.querySelector('#form')
       })
       if (response.ok) {
         this.reset()
-        alert('Gracias por contactar a CCG Concretos, te escribiremos pronto 😊')
+        alert('Gracias por contactar a Construrama La Laguna, te escribiremos pronto 😊')
       }
     }
